@@ -1,0 +1,41 @@
+name: aoura
+description: A new Flutter project.
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  feather_icons_flutter: ^4.7.4
+  flat_icons_flutter: ^1.0.2
+
+  cupertino_icons: ^0.1.2
+  path_drawing:
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/user.jpeg
+
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/poppins/Poppins-Regular.ttf
+        - asset: assets/fonts/poppins/Poppins-Medium.ttf
+        - asset: assets/fonts/poppins/Poppins-SemiBold.ttf
+          weight: 400
+
+    - family: Product Sans
+      fonts:
+        - asset: assets/font/Product_Sans_Bold.ttf
+        - asset: assets/font/Product_Sans_Regular.ttf
