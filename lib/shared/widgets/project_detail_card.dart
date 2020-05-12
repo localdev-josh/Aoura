@@ -1,3 +1,4 @@
+import 'package:aoura/shared/styleguide/responsive_ui/size_config.dart';
 import 'package:aoura/shared/widgets/progress_indicator.dart';
 import 'package:flutter/material.dart';
 
@@ -5,9 +6,9 @@ import 'dart:math' as math;
 
 class ProjectDetailCard extends StatelessWidget {
   final List title = [
-    "HathTech",
-    "Automotive Shop",
-    "HathTech Innovations",
+    "Eatini mobile-app",
+    "bizfrontal_v1",
+    "Techgen innovations",
   ];
 
   final List colors = [Colors.blue, Colors.black, Colors.green];
@@ -15,165 +16,180 @@ class ProjectDetailCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var rng = new math.Random.secure();
-    return Padding(
-        padding: EdgeInsets.only(left: 8.0, right: 8.0, top: 4.0, bottom: 4.0),
-        child: Card(
-          elevation: 1.0,
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
-          child: Padding(
-            padding: const EdgeInsets.only(top: 8.0, bottom: 8),
-            child: ListTile(
-              leading: Container(
-                child: Center(
-                  child: Text(
-                    title[rng.nextInt(3)].split(" ")[0][0],
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w900,
-                        fontSize: 24),
+    return Container(
+        margin: EdgeInsets.symmetric(
+            horizontal: 6.11 * SizeConfig.widthMultiplier,
+            vertical: 1.41 * SizeConfig.heightMultiplier),
+        decoration: BoxDecoration(
+            borderRadius:
+                BorderRadius.circular(0.94 * SizeConfig.heightMultiplier),
+            color: Colors.white),
+        child: Container(
+          height: 29.38 * SizeConfig.heightMultiplier,
+          padding: EdgeInsets.symmetric(
+              vertical: 3.17 * SizeConfig.heightMultiplier),
+          child: Stack(
+            children: <Widget>[
+              Positioned(
+                left: 0,
+                top: 0,
+                child: FractionallySizedBox(
+                  child: Container(
+                    margin: EdgeInsets.symmetric(
+                      horizontal: 6.87 * SizeConfig.widthMultiplier,
+                    ),
+                    child: Center(
+                      child: Text(
+                        title[rng.nextInt(3)]
+                            .split(" ")[0][0]
+                            .toString()
+                            .toUpperCase(),
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w900,
+                            fontSize: 2.82 * SizeConfig.textMultiplier),
+                      ),
+                    ),
+                    decoration: BoxDecoration(
+                        borderRadius: new BorderRadius.circular(
+                            0.94 * SizeConfig.heightMultiplier),
+                        color: colors[rng.nextInt(3)]),
+                    width: 17.81 * SizeConfig.widthMultiplier,
+                    height: 8.2256 * SizeConfig.heightMultiplier,
                   ),
                 ),
-                decoration: BoxDecoration(
-                    borderRadius: new BorderRadius.circular(8.0),
-                    color: colors[rng.nextInt(3)]),
-                width: 70.0,
-                height: 80.0,
               ),
-              title: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text(
-                    title[rng.nextInt(3)],
-                    style: TextStyle(
-                        color: Colors.black54,
-                        fontWeight: FontWeight.w700,
-                        fontSize: 18,
-                        fontFamily: "SF"),
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
+              Positioned(
+                top: 1.175 * SizeConfig.heightMultiplier,
+                left: 30.53 * SizeConfig.widthMultiplier,
+                child: Container(
+                  child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Text(
-                        "${rng.nextInt(40)} tasks",
+                        title[rng.nextInt(3)],
                         style: TextStyle(
-                            color: Colors.blueAccent,
-                            fontSize: 12,
-                            fontWeight: FontWeight.bold),
+                            color: Colors.black54,
+                            fontWeight: FontWeight.w700,
+                            fontSize: 2.35 * SizeConfig.textMultiplier,
+                            fontFamily: "SF"),
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                       ),
                       SizedBox(
-                        width: 8,
+                        height: 0.59 * SizeConfig.heightMultiplier,
+                      ),
+                      Row(
+                        children: <Widget>[
+                          Text(
+                            "${rng.nextInt(40)} tasks",
+                            style: TextStyle(
+                                color: Color(0xff2958DA),
+                                fontSize: 2.115 * SizeConfig.textMultiplier,
+                                fontWeight: FontWeight.bold),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                          Container(
+                            width: 1.0,
+                            color: Color(0xffC8C8C8),
+                            height: 1.53 * SizeConfig.heightMultiplier,
+                            margin: EdgeInsets.symmetric(horizontal: 10),
+                          ),
+                          Text(
+                            "${rng.nextInt(30)} sep 19",
+                            style: TextStyle(
+                              fontSize: 2.115 * SizeConfig.textMultiplier,
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xffFF8586),
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 1.76 * SizeConfig.heightMultiplier,
+                      ),
+                      Text(
+                        "Members",
+                        style: TextStyle(
+                          fontSize: 1.88 * SizeConfig.heightMultiplier,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xffC2C1C1),
+                        ),
                       ),
                       Container(
-                        width: 2.0,
-                        color: Colors.orange.withOpacity(0.3),
-                        height: 15,
+                        margin: EdgeInsets.only(
+                            top: 0.82 * SizeConfig.heightMultiplier),
+                        child: Row(
+                          children: <Widget>[
+                            Container(
+                              decoration: BoxDecoration(
+                                  borderRadius: new BorderRadius.circular(
+                                      0.94 * SizeConfig.heightMultiplier),
+                                  image: DecorationImage(
+                                      image: AssetImage("assets/user.jpeg"))),
+                              width: 7.63 * SizeConfig.widthMultiplier,
+                              height: 3.525 * SizeConfig.heightMultiplier,
+                            ),
+                            Container(
+                              margin: EdgeInsets.all(
+                                  0.94 * SizeConfig.heightMultiplier),
+                              decoration: BoxDecoration(
+                                  borderRadius: new BorderRadius.circular(
+                                      0.94 * SizeConfig.heightMultiplier),
+                                  image: DecorationImage(
+                                      image: AssetImage("assets/user.jpeg"))),
+                              width: 7.63 * SizeConfig.widthMultiplier,
+                              height: 3.525 * SizeConfig.heightMultiplier,
+                            ),
+                          ],
+                        ),
                       ),
                       SizedBox(
-                        width: 8,
+                        height: 1.645 * SizeConfig.heightMultiplier,
                       ),
-                      Text(
-                        "${rng.nextInt(30)} sep 19",
-                        style: TextStyle(
-                          fontSize: 12,
-                          color: Colors.red,
+                      Container(
+                        margin: EdgeInsets.only(
+                            bottom: 1.645 * SizeConfig.heightMultiplier),
+                        width: 50.89 * SizeConfig.widthMultiplier,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Text(
+                              "Progress",
+                              style: TextStyle(
+                                  color: Color(0xffAEAEAE),
+                                  fontSize: 1.76 * SizeConfig.textMultiplier,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            Text(
+                              "75%",
+                              style: TextStyle(
+                                color: Color(0xff7FCE9F),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 1.88 * SizeConfig.textMultiplier,
+                              ),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ],
                         ),
                       ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 18,
-                  ),
-                  Text(
-                    "Members",
-                    style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.grey[500],
-                    ),
-                  ),
-                  Container(
-                    width: MediaQuery.of(context).size.width * 0.7,
-                    child: Row(
-                      children: <Widget>[
-                        Container(
-                          decoration: BoxDecoration(
-                              borderRadius: new BorderRadius.circular(8.0),
-                              image: DecorationImage(
-                                  image: AssetImage("assets/user.jpeg"))),
-                          width: 40.0,
-                          height: 40.0,
+                      Container(
+                        width: 50.89 * SizeConfig.widthMultiplier,
+                        height: 6,
+                        child: FAProgressBar(
+                          size: 4,
+                          currentValue: 75,
+                          progressColor: Color(0xff6DD28E),
+                          backgroundColor: Color(0xffF0F0F0),
                         ),
-                        Container(
-                          margin: EdgeInsets.all(8),
-                          decoration: BoxDecoration(
-                              borderRadius: new BorderRadius.circular(8.0),
-                              image: DecorationImage(
-                                  image: AssetImage("assets/user.jpeg"))),
-                          width: 40.0,
-                          height: 40.0,
-                        ),
-                        Container(
-                          margin: EdgeInsets.all(8),
-                          decoration: BoxDecoration(
-                              borderRadius: new BorderRadius.circular(8.0),
-                              image: DecorationImage(
-                                  image: AssetImage("assets/user.jpeg"))),
-                          width: 40.0,
-                          height: 40.0,
-                        ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    height: 14,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      Text(
-                        "Progress",
-                        style: TextStyle(
-                            color: Colors.grey[500],
-                            fontSize: 12,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      Text(
-                        "43%",
-                        style: TextStyle(
-                          color: Colors.green,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 12,
-                        ),
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
                       ),
                     ],
                   ),
-                  SizedBox(
-                    height: 12,
-                  ),
-                  FAProgressBar(
-                    size: 4,
-                    currentValue: 75,
-                    progressColor: Colors.green,
-                    backgroundColor: Color(0xffF0F0F0),
-                  ),
-                  SizedBox(
-                    height: 2,
-                  ),
-                ],
-              ),
-            ),
+                ),
+              )
+            ],
           ),
         ));
   }

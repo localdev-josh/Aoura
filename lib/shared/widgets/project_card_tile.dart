@@ -1,3 +1,4 @@
+import 'package:aoura/shared/styleguide/responsive_ui/size_config.dart';
 import 'package:aoura/shared/widgets/progress_indicator.dart';
 import 'package:flutter/material.dart';
 
@@ -16,13 +17,15 @@ class ProjectCardTile extends StatelessWidget {
   Widget build(BuildContext context) {
     var rng = new math.Random.secure();
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+      margin: EdgeInsets.symmetric(
+          horizontal: 6.11 * SizeConfig.widthMultiplier,
+          vertical: 1.41 * SizeConfig.heightMultiplier),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(8.0),
+        borderRadius: BorderRadius.circular(0.94 * SizeConfig.heightMultiplier),
         color: Colors.white,
       ),
       child: Padding(
-        padding: const EdgeInsets.only(top: 8.0, bottom: 8),
+        padding: EdgeInsets.symmetric(vertical: 0.94 * SizeConfig.heightMultiplier),
         child: ListTile(
           leading: Container(
             child: Center(
@@ -31,13 +34,13 @@ class ProjectCardTile extends StatelessWidget {
                 style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.w900,
-                    fontSize: 24),
+                    fontSize: 2.82 * SizeConfig.textMultiplier),
               ),
             ),
             decoration: BoxDecoration(
-                borderRadius: new BorderRadius.circular(8.0),
+                borderRadius: new BorderRadius.circular(0.94 * SizeConfig.heightMultiplier),
                 color: colors[rng.nextInt(3)]),
-            width: 56.0,
+            width: 14.25 * SizeConfig.widthMultiplier,
           ),
           title: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -48,12 +51,14 @@ class ProjectCardTile extends StatelessWidget {
                 style: TextStyle(
                     color: Colors.black54,
                     fontWeight: FontWeight.w700,
-                    fontSize: 18,
+                    fontSize: 2.115 * SizeConfig.textMultiplier,
                     fontFamily: "SF"),
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
               ),
-              SizedBox(height: 4,),
+              SizedBox(
+                height: 0.47 * SizeConfig.heightMultiplier,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -62,7 +67,7 @@ class ProjectCardTile extends StatelessWidget {
                     "${rng.nextInt(40)} tasks",
                     style: TextStyle(
                         color: Colors.blueAccent,
-                        fontSize: 13,
+                        fontSize: 1.53 * SizeConfig.textMultiplier,
                         fontWeight: FontWeight.bold),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
@@ -70,17 +75,16 @@ class ProjectCardTile extends StatelessWidget {
                   Text(
                     "${rng.nextInt(20)} members",
                     style: TextStyle(
-                      fontSize: 13,
-                      color: Color(0xffB9B9B9),
-                      fontWeight: FontWeight.w700
-                    ),
+                        fontSize: 1.53 * SizeConfig.textMultiplier,
+                        color: Color(0xffB9B9B9),
+                        fontWeight: FontWeight.w700),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   ),
                 ],
               ),
               SizedBox(
-                height: 10,
+                height: 1.175 * SizeConfig.heightMultiplier,
               ),
               FAProgressBar(
                 size: 4,
@@ -89,7 +93,7 @@ class ProjectCardTile extends StatelessWidget {
                 backgroundColor: Color(0xffF0F0F0),
               ),
               SizedBox(
-                height: 2,
+                height: 0.235 * SizeConfig.heightMultiplier,
               ),
             ],
           ),

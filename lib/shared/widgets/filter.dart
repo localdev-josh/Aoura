@@ -13,8 +13,8 @@ class FiltersWidget extends StatefulWidget {
 
 class FiltersWidgetState extends State<FiltersWidget> {
   Widget _buildBadge(title) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 8.0),
+    return Container(
+      margin: const EdgeInsets.only(right: 6),
       child: GestureDetector(
         onTap: () {
           selectedFilter = title.toLowerCase();
@@ -25,7 +25,10 @@ class FiltersWidgetState extends State<FiltersWidget> {
           label: Text(
             title,
             style: TextStyle(
-                fontFamily: "Montserrat", fontWeight: FontWeight.bold),
+                fontFamily: "Poppins",
+                fontWeight: FontWeight.bold,
+                letterSpacing: 0.3,
+                fontSize: 15),
           ),
           labelStyle: TextStyle(
               color: selectedFilter == title.toLowerCase()
@@ -37,7 +40,7 @@ class FiltersWidgetState extends State<FiltersWidget> {
               : Colors.grey[300],
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(
-              Radius.circular(8.0),
+              Radius.circular(6.0),
             ),
           ),
         ),
@@ -58,9 +61,11 @@ class FiltersWidgetState extends State<FiltersWidget> {
   Widget build(BuildContext context) {
     return Container(
       height: 60.0,
-      padding: EdgeInsets.only(left: 8.0, top: 8, bottom: 8),
+      margin: EdgeInsets.only(left: 24, top: 27),
+      alignment: Alignment.center,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
+        shrinkWrap: false,
         itemCount: filters.length,
         itemBuilder: (BuildContext context, int index) {
           return _buildBadge(filters[index]);

@@ -1,3 +1,4 @@
+import 'package:aoura/shared/styleguide/responsive_ui/size_config.dart';
 import 'package:flutter/material.dart';
 import 'package:aoura/shared/widgets/project_card.dart';
 import 'package:aoura/shared/widgets/carousel_slider.dart';
@@ -26,10 +27,10 @@ class _ProjectSliderState extends State<ProjectSlider> {
       child: Container(
         width: 6.0,
         height: 6.0,
-        margin: EdgeInsets.symmetric(vertical: 24.0, horizontal: 3.0),
+        margin: EdgeInsets.symmetric(vertical: 2.82 * SizeConfig.heightMultiplier, horizontal: 3.0),
         decoration: BoxDecoration(
             shape: BoxShape.rectangle,
-            borderRadius: BorderRadius.all(Radius.circular(8.0)),
+            borderRadius: BorderRadius.all(Radius.circular(0.94 * SizeConfig.heightMultiplier)),
             color: _current == index
                 ? Colors.black
                 : Colors.grey.withOpacity(0.8)),

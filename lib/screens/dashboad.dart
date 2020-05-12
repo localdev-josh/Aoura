@@ -1,3 +1,4 @@
+import 'package:aoura/shared/styleguide/responsive_ui/size_config.dart';
 import 'package:flutter/material.dart';
 import 'package:aoura/shared/widgets/dashed_rect.dart';
 import 'package:aoura/shared/widgets/project_card_tile.dart';
@@ -18,20 +19,21 @@ class Dashboard extends StatelessWidget {
               constraints:
                   BoxConstraints(minHeight: viewportConstraints.maxHeight),
               child: Column(children: [
-                SizedBox(
-                  height: 20,
-                ),
                 Container(
-                  margin: EdgeInsets.symmetric(
-                    horizontal: 24,
-                  ),
+                  margin: EdgeInsets.only(
+                      left: 6.11 * SizeConfig.widthMultiplier,
+                      right: 6.11 * SizeConfig.widthMultiplier,
+                      bottom: 2.582 * SizeConfig.heightMultiplier,
+                      top: 2.35 * SizeConfig.heightMultiplier),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       Text(
                         "Today's tasks",
-                        style:
-                            TextStyle(fontSize: 30, fontWeight: FontWeight.w700, color: Color(0xff2F3336)),
+                        style: TextStyle(
+                            fontSize: 3.525 * SizeConfig.textMultiplier,
+                            fontWeight: FontWeight.w700,
+                            color: Color(0xff2F3336)),
                       ),
                       DottedBorder(
                           borderType: BorderType.RRect,
@@ -40,39 +42,39 @@ class Dashboard extends StatelessWidget {
                           child: Center(
                             child: Icon(
                               Icons.navigate_next,
-                              size: 28,
-                              color: Colors.orange,
+                              size: 3.29 * SizeConfig.textMultiplier,
+                              color: Color(0xffFD6768),
                             ),
                           ),
                           strokeWidth: 1,
-                          padding: EdgeInsets.all(8),
+                          padding: EdgeInsets.all(
+                              0.94 * SizeConfig.heightMultiplier),
                           dashPattern: [3, 4])
                     ],
                   ),
                 ),
-                SizedBox(
-                  height: 22,
-                ),
                 Container(
-                  margin: EdgeInsets.only(left: 24),
+                  margin: EdgeInsets.only(
+                      left: 6.11 * SizeConfig.widthMultiplier,
+                      bottom: 0.94 * SizeConfig.heightMultiplier),
                   child: ProjectSlider(
                     projects: [1, 2, 3, 4, 5],
                   ),
                 ),
-                SizedBox(
-                  height: 8,
-                ),
                 Container(
-                  margin: EdgeInsets.symmetric(
-                    horizontal: 24,
-                  ),
+                  margin: EdgeInsets.only(
+                      left: 6.11 * SizeConfig.widthMultiplier,
+                      right: 6.11 * SizeConfig.widthMultiplier,
+                      bottom: 1.41 * SizeConfig.heightMultiplier),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       Text(
                         "Open projects",
-                        style:
-                        TextStyle(fontSize: 22, fontWeight: FontWeight.w600, color: Color(0xff2F3336)),
+                        style: TextStyle(
+                            fontSize: 2.585 * SizeConfig.textMultiplier,
+                            fontWeight: FontWeight.w600,
+                            color: Color(0xff2F3336)),
                       ),
                       DottedBorder(
                           borderType: BorderType.RRect,
@@ -81,18 +83,15 @@ class Dashboard extends StatelessWidget {
                           child: Center(
                             child: Icon(
                               Icons.navigate_next,
-                              size: 28,
-                              color: Colors.orange,
+                              size: 3.29 * SizeConfig.textMultiplier,
+                              color: Color(0xffFD6768),
                             ),
                           ),
                           strokeWidth: 1,
-                          padding: EdgeInsets.all(8),
+                          padding: EdgeInsets.all(0.94 * SizeConfig.heightMultiplier),
                           dashPattern: [3, 4])
                     ],
                   ),
-                ),
-                SizedBox(
-                  height: 12.0,
                 ),
                 Container(
                   child: ListView.builder(
