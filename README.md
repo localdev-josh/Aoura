@@ -13,3 +13,7 @@ A new Flutter project.
 
 
 - Will use bloc pattern
+
+
+
+<img src="https://github.com/joshh152/Aoura/blob/master/assets/s3.jpg" width=300>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/joshh152/Aoura/blob/master/assets/s2.jpg" width=300>
